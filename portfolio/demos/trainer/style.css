@@ -1,0 +1,121 @@
+/*
+Name: Ati Assefa
+File: style.css
+Project: Personal Trainer Demo Website
+
+What this file does:
+This file controls the visual design of the personal trainer demo site.
+It styles the hero background image, text overlay, buttons,
+content sections, and layout to create a clean, modern,
+and professional fitness website look.
+*/
+
+/* ================= GLOBAL STYLES ================= */
+
+/* Styles the entire page */
+body {
+  margin: 0;                          /* Removes default browser spacing */
+  font-family: Arial, sans-serif;    /* Simple, readable font */
+  background: #f4f6f8;                /* Light gray background */
+  color: #1f2933;                     /* Dark text color */
+  line-height: 1.6;                   /* Space between lines */
+}
+
+/* ================= HERO / HEADER ================= */
+
+/* Styles the hero section with fitness background image */
+header {
+  position: relative;                        /* Needed for overlay */
+  height: 70vh;                              /* Makes header tall */
+  background-image: url("images/hero.jpg"); /* Trainer hero image */
+  background-size: cover;                   /* Image fills area */
+  background-position: center;              /* Centers image */
+  background-repeat: no-repeat;             /* No repeating */
+  display: flex;                            /* Enables flexbox */
+  flex-direction: column;                   /* Stack items vertically */
+  justify-content: center;                  /* Center vertically */
+  align-items: center;                      /* Center horizontally */
+  text-align: center;                       /* Center text */
+  color: white;                             /* White text */
+  padding: 20px;                            /* Inner spacing */
+}
+
+/* Dark overlay to make text readable on fitness image */
+header::before {
+  content: "";                              /* Required for pseudo-element */
+  position: absolute;                      /* Covers entire header */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);          /* Dark transparent overlay */
+  z-index: 1;                               /* Above image */
+}
+
+/* Keeps text and buttons above the overlay */
+header * {
+  position: relative;                      /* Needed for layering */
+  z-index: 2;                               /* Above overlay */
+}
+
+/* Styles the main title text */
+header h1 {
+  font-size: 3rem;                         /* Large heading */
+  margin-bottom: 10px;
+}
+
+/* Styles the tagline under the title */
+header p {
+  font-size: 1.2rem;                       /* Slightly larger text */
+  margin-bottom: 25px;
+}
+
+/* Styles the main call-to-action button */
+.btn {
+  display: inline-block;                   /* Button-like behavior */
+  background: #2563eb;                     /* Strong blue action color */
+  color: white;                            /* White text */
+  padding: 12px 25px;                      /* Button size */
+  text-decoration: none;                   /* No underline */
+  border-radius: 6px;                      /* Rounded corners */
+  font-weight: bold;                       /* Makes button stand out */
+}
+
+/* ================= SECTIONS ================= */
+
+/* Styles all main content sections */
+section {
+  padding: 40px 20px;                      /* Space inside sections */
+  max-width: 800px;                        /* Limits content width */
+  margin: auto;                            /* Centers section */
+}
+
+/* Styles section headings */
+h2 {
+  color: #111827;                          /* Dark heading color */
+  margin-bottom: 15px;
+}
+
+/* ================= SERVICES LIST ================= */
+
+/* Removes bullet points from lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styles each service item */
+ul li {
+  margin-bottom: 10px;
+  font-weight: bold;                       /* Emphasizes services */
+}
+
+/* ================= FOOTER ================= */
+
+/* Styles the footer at the bottom of the page */
+footer {
+  background: #0f172a;                     /* Dark professional background */
+  color: white;                            /* White text */
+  text-align: center;                      /* Centers footer text */
+  padding: 20px;
+}
